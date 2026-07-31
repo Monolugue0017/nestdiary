@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "栖记 NestDiary",
+  "version": "0.1.0",
+  "identifier": "com.nestdiary.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "栖记 NestDiary",
+        "width": 1000,
+        "height": 700,
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": true,
+        "center": true,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "publisher": "NestDiary",
+    "category": "Productivity",
+    "shortDescription": "隐私优先的本地日记+备忘+待办三合一桌面应用",
+    "longDescription": "栖记是一款隐私优先的本地日记应用，数据100%存储在本地设备，零账号、零云端、离线可用。支持日记撰写、待办管理、备忘记录三大功能。"
+  }
+}
